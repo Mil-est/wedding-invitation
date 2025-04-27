@@ -1,77 +1,66 @@
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import { Noto_Sans_KR } from "next/font/google";
-import dynamic from "next/dynamic";
-import { styled } from "@stitches/react";
-import JsonData from "@/data.json";
-import Script from "next/script";
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:type" content="website" />
+  <meta name="Title" content="○○○❤○○○ Invitación al Matrimonio" />
+  <meta name="Description" content="○○○○년 ○○월 ○○일 ○요일 오전 ○○시 ○○분" />
+  <meta name="Keyword" content="2026 Enero, sábado 17 04:00pm" />
+  <meta property="og:title" content="○○○❤○○○ Invitación al Matrimonio" />
+  <meta property="og:description" content="2026 Enero, sábado 17 04:00pm" />
+  <meta property="og:url" content="https://mil-est.github.io/wedding-invitation/" />
+  <meta name="theme-color" content="#BCAAA4" />
+  <title>○○○❤○○○ Están invitada(o) a nuestra boda</title>
+  <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    footer {
+      background: #D7CCC8;
+      background-image: url('./assets/GroovePaper.png');
+      opacity: 0.6;
+      text-align: center;
+      width: 100%;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- Aquí deberías insertar el contenido de Title -->
+    <section id="title"></section>
 
-const Title = dynamic(() => import("@/components/Title"), { ssr: false });
-const Gretting = dynamic(() => import("@/components/Gretting"), { ssr: false });
-const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: false });
-const Location = dynamic(() => import("@/components/Location"), { ssr: false });
-const CongratulatoryMoney = dynamic(
-  () => import("@/components/CongratulatoryMoney"),
-  { ssr: false }
-);
-const Share = dynamic(() => import("@/components/Share"), { ssr: false });
+    <!-- Aquí deberías insertar el contenido de Gretting -->
+    <section id="greeting"></section>
 
-const notoSansKR = Noto_Sans_KR({
-  weight: ["400", "700"],
-  subsets: [],
-  style: "normal",
-});
+    <!-- Galería de imágenes -->
+    <section id="gallery"></section>
 
-const Footer = styled("footer", {
-  background: "#D7CCC8",
-  backgroundImage: "url(./assets/GroovePaper.png)",
-  opacity: 0.6,
-  textAlign: "center",
-  width: "100%",
-  height: "100px",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  flexDirection: "column",
-  "-webkit-box-align": "center",
-  "-webkit-box-pack": "center",
-});
+    <!-- Ubicación del evento -->
+    <section id="location"></section>
 
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:type" content="website" />
-        <meta content="○○○❤○○○ Invitación al Matrimonio" name="Title" />
-        <meta
-          content="○○○○년 ○○월 ○○일 ○요일 오전 ○○시 ○○분"
-          name="Description"
-        />
-        <meta content="2026 Enero, sábado 17 04:00pm" name="Keyword" />
-        <meta property="og:title" content="○○○❤○○○ Invitación al Matrimonio" />
-        <meta
-          property="og:description"
-          content="2026 Enero, sábado 17 04:00pm"
-        />
-        <meta
-          property="og:url"
-          content="https://mil-est.github.io/wedding-invitation/"
-        />
-        <meta name="theme-color" content="#BCAAA4" />
-        <title>○○○❤○○○ Están invitada(o) a nuestra boda</title>
-      </Head>
-      <main className={`${notoSansKR.className}`}>
-        <Script src="https://developers.kakao.com/sdk/js/kakao.min.js"></Script>
-        <Title data={JsonData} />
-        <Gretting data={JsonData} />
-        <Gallery />
-        <Location />
-        <CongratulatoryMoney data={JsonData} />
-        <Share data={JsonData} />
-        <Footer>Copyright © 2021 KyuHyuk Lee</Footer>
-      </main>
-    </>
-  );
-}
+    <!-- Información sobre dinero de felicitación -->
+    <section id="congratulatory-money"></section>
+
+    <!-- Compartir en redes sociales -->
+    <section id="share"></section>
+
+    <footer>
+      Copyright © 2021 KyuHyuk Lee
+    </footer>
+  </main>
+
+  <script>
+    // Aquí podrías agregar scripts para llenar las secciones si lo necesitas
+  </script>
+</body>
+</html>
