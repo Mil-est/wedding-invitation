@@ -1,23 +1,23 @@
 {
-  "date": "1970년 01월 01일, 목요일 오전 12시 00분",
-  "location": "○○○웨딩, ○층 ○○홀",
-  "gretting": "서로 마주 보며 다져온 사랑을\n이제 함께 한곳을 바라보며 걸어갈 수 있는\n큰 사랑으로 키우고자 합니다.\n저희 두 사람이 사랑의 이름으로 지켜나갈 수 있게\n앞날을 축복해 주시면 감사하겠습니다.",
+  "date": "2016 01 17, Sábado  04:00 pm",
+  "location": "Iglesia San Pablo de la Cruz",
+  "gretting": "El amor que hemos construido\n Antes las adversidades que Dios nos ha permitido enfrentar\n , enfrentarlo juntos.\n Le pedimos bendecir nuestro futurro.",
   "groom": {
-    "name": "○○○",
+    "name": "Rodrigo Mellizo Escobar",
     "account_number": "○○은행 ***-***-******",
     "parents": {
       "mother": {
-        "name": "○○○",
+        "name": "Maria Luisa Escobar",
         "account_number": "○○은행 ***-***-******"
       },
       "father": {
-        "name": "○○○",
+        "name": "Basilio Mellizo",
         "account_number": "○○은행 ***-***-******"
       }
     }
   },
   "bride": {
-    "name": "○○○",
+    "name": "Kathia Calle",
     "account_number": "○○은행 ***-***-******",
     "parents": {
       "mother": {
