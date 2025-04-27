@@ -12,8 +12,10 @@
   <meta property="og:url" content="https://mil-est.github.io/wedding-invitation/" />
   <meta name="theme-color" content="#BCAAA4" />
   <title>○○○❤○○○ Están invitada(o) a nuestra boda</title>
+
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
@@ -36,31 +38,180 @@
 </head>
 <body>
   <main>
-    <!-- Aquí deberías insertar el contenido de Title -->
-    <section id="title"></section>
+    <section id="title" style="width: 100%; height: 100vh; overflow: hidden; margin: 0 auto; position: relative;">
+      <video autoplay loop muted playsinline
+        style="background-color: #aeb8b3; opacity: 0.9; object-fit: cover; object-position: center center; width: 100%; height: 100%; min-height: 480px;">
+        <source src="./assets/BackgroundVideo.mp4" type="video/mp4" />
+        Tu navegador no soporta el video de fondo.
+      </video>
+    
+      <div style="position: absolute; width: 100%; top: 20%; left: 50%; transform: translate(-50%, -50%); text-align: center; text-shadow: -1px 0 #9e9e9e, 0 1px #9e9e9e, 1px 0 #9e9e9e, 0 -1px #9e9e9e; animation: fadein 3s;">
+        <p style="font-size: 1.5vh; opacity: 0.45; margin-bottom: 16px;">WEDDING INVITATION</p>
+        <p style="font-size: 3.5vh; font-weight: bold; opacity: 0.9; margin-bottom: 16px;">[Nombre del Novio] &amp; [Nombre de la Novia]</p>
+        <p style="font-size: 2vh; opacity: 0.65; margin-bottom: 24px;">
+          [Fecha del Evento] <br>
+          [Ubicación del Evento]
+        </p>
+      </div>
+    
+      <style>
+        @keyframes fadein {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+      </style>
+    </section>
+    
 
-    <!-- Aquí deberías insertar el contenido de Gretting -->
-    <section id="greeting"></section>
+      <section id="greeting" style="background: #efebe9; background-image: url('./assets/GroovePaper.png'); width: 100%; padding-bottom: 42px; text-align: center;">
+        <hr style="margin-top: 0; margin-bottom: 32px;">
+        <p style="font-size: 2vh; font-weight: bold; opacity: 0.85; margin-bottom: 0;">결혼합니다</p>
+      
+        <div style="font-size: 1.75vh; line-height: 1.75; opacity: 0.75; margin-bottom: 16px; width: 100%; text-align: center;">
+          <!-- Aquí va el contenido de saludo dinámico, por ejemplo, 'Bienvenidos a nuestra boda' -->
+          <p>Bienvenidos a nuestra boda. Estamos emocionados de celebrar este día con ustedes.</p>
+        </div>
+      
+        <p style="font-size: 1.75vh; line-height: 1.75; opacity: 0.85; margin-bottom: 0; width: 100%; text-align: center;">
+          [Nombre del Novio] · [Nombre del Padre del Novio] · [Nombre de la Madre del Novio]의 장남 [Nombre del Novio]<br>
+          [Nombre de la Novia] · [Nombre del Padre de la Novia] · [Nombre de la Madre de la Novia]의 장녀 [Nombre de la Novia]
+        </p>
+      </section>
 
-    <!-- Galería de imágenes -->
-    <section id="gallery"></section>
 
-    <!-- Ubicación del evento -->
-    <section id="location"></section>
+    <section id="gallery" style="background: #efebe9; background-image: url('./assets/GroovePaper.png'); width: 100%; text-align: center; padding-bottom: 24px;">
+      <hr style="margin-top: 0; margin-bottom: 32px;">
+      <p style="font-size: 2vh; font-weight: bold; opacity: 0.85; margin-bottom: 0;">우리의 아름다운 순간</p>
+    
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 24px;">
+        <img src="./assets/Gallery_Photo_1.png" alt="Galería 1" style="width: 200px; height: auto; border-radius: 8px;">
+        <img src="./assets/Gallery_Photo_2.png" alt="Galería 2" style="width: 200px; height: auto; border-radius: 8px;">
+        <img src="./assets/Gallery_Photo_3.png" alt="Galería 3" style="width: 200px; height: auto; border-radius: 8px;">
+        <img src="./assets/Gallery_Photo_4.png" alt="Galería 4" style="width: 200px; height: auto; border-radius: 8px;">
+        <img src="./assets/Gallery_Photo_5.png" alt="Galería 5" style="width: 200px; height: auto; border-radius: 8px;">
+        <img src="./assets/Gallery_Photo_6.png" alt="Galería 6" style="width: 200px; height: auto; border-radius: 8px;">
+      </div>
+    </section>
 
-    <!-- Información sobre dinero de felicitación -->
-    <section id="congratulatory-money"></section>
 
-    <!-- Compartir en redes sociales -->
-    <section id="share"></section>
+    
+    <section id="location" style="background: #efebe9; background-image: url('./assets/GroovePaper.png'); width: 100%; padding-bottom: 42px; text-align: center;">
+    <hr style="margin-top: 0; margin-bottom: 32px;">
+    <p style="font-size: 2vh; font-weight: bold; opacity: 0.85; margin-bottom: 0;">오시는 길</p>
+    <img src="./assets/LocationMap.png" style="width: 75%; max-width: 1024px;" />
+  </section>
+
+
+    <section id="congratulatory-money" style="background: #efebe9; background-image: url('./assets/GroovePaper.png'); padding-bottom: 18px; text-align: center;">
+      <hr style="margin-top: 0; margin-bottom: 32px;">
+      <p style="font-size: 2vh; font-weight: bold; opacity: 0.85; margin-bottom: 0;">축하의 마음을 전하세요</p>
+
+      <p style="font-size: 1.5vh; line-height: 1.75; opacity: 0.75; margin-bottom: 24px;">
+        축하의 마음을 담아 축의금을 전달해 보세요.
+      </p>
+
+      <div style="display: inline-block; text-align: center; margin: 0 24px 24px 24px;">
+        <div style="font-size: 64px; margin-bottom: 16px;">💙</div>
+        <p style="font-size: 1.3vh; line-height: 1.75; opacity: 0.75; margin-bottom: 24px;">신랑측 계좌번호 확인</p>
+
+        <div>
+          <b>부) [Nombre del Padre del Novio]</b> - [Número de Cuenta del Padre]<br>
+          <b>모) [Nombre de la Madre del Novio]</b> - [Número de Cuenta de la Madre]<br>
+          <b>신랑 [Nombre del Novio]</b> - [Número de Cuenta del Novio]
+        </div>
+      </div>
+
+      <div style="display: inline-block; text-align: center; margin: 0 24px 24px 24px;">
+        <div style="font-size: 64px; margin-bottom: 16px;">💗</div>
+        <p style="font-size: 1.3vh; line-height: 1.75; opacity: 0.75; margin-bottom: 24px;">신부측 계좌번호 확인</p>
+
+        <div>
+          <b>부) [Nombre del Padre de la Novia]</b> - [Número de Cuenta del Padre]<br>
+          <b>모) [Nombre de la Madre de la Novia]</b> - [Número de Cuenta de la Madre]<br>
+          <b>신부 [Nombre de la Novia]</b> - [Número de Cuenta de la Novia]
+        </div>
+      </div>
+
+      <p style="font-size: 1.3vh; line-height: 1.75; opacity: 0.65; margin-top: 8px;">
+        계좌번호 클릭시, 붙여넣기 가능한 텍스트로 복사됩니다.
+      </p>
+    </section>
+
+    
+    
+    
+    
+<section id="share" style="background: #efebe9; background-image: url('./assets/GroovePaper.png'); width: 100%; padding-bottom: 42px; text-align: center;">
+  <hr style="margin-top: 0; margin-bottom: 32px;">
+  <p style="font-size: 2vh; font-weight: bold; opacity: 0.85; margin-bottom: 0;">청첩장 공유하기</p>
+
+  <!-- Botón para compartir en KakaoTalk -->
+  <button id="sendKakao" style="margin: 8px; background: #fee500; border-color: #fee500; color: #181600; font-size: 16px; padding: 10px 20px; cursor: pointer;">
+    <span style="margin-right: 8px;">💬</span> 카카오톡으로 공유하기
+  </button>
+
+  <!-- Botón para copiar el link -->
+  <button id="copyLink" style="margin: 8px; background: #53acee; border-color: #53acee; color: #ffffff; font-size: 16px; padding: 10px 20px; cursor: pointer;">
+    <span style="margin-right: 8px;">🔗</span> 링크로 공유하기
+  </button>
+
+  <script>
+    // Lógica para compartir en KakaoTalk
+    document.getElementById('sendKakao').addEventListener('click', function() {
+      const url = "[URL de la invitación]"; // Reemplazar con la URL de la invitación
+      const title = "[Nombre del Novio]❤[Nombre de la Novia] 결혼식에 초대합니다"; // Título de la invitación
+      const description = "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요🤵👰"; // Descripción
+      const imageUrl = "[Imagen de la invitación]"; // Imagen de la invitación (URL de la imagen)
+      
+      // Asegúrate de que Kakao esté inicializado antes de usarlo
+      if (window.Kakao) {
+        window.Kakao.init("[API_TOKEN]"); // Token de la API de Kakao
+
+        window.Kakao.Link.createDefaultButton({
+          objectType: 'feed',
+          container: '#sendKakao',
+          content: {
+            title: title,
+            description: description,
+            imageUrl: imageUrl,
+            link: {
+              mobileWebUrl: url,
+              webUrl: url
+            }
+          },
+          buttons: [{
+            title: "청첩장 열기",
+            link: {
+              mobileWebUrl: url,
+              webUrl: url
+            }
+          }],
+          installTalk: true
+        });
+
+        message("카카오톡으로 청첩장을 공유합니다!"); // Mensaje de éxito
+      }
+    });
+
+    // Lógica para copiar el link al portapapeles
+    document.getElementById('copyLink').addEventListener('click', function() {
+      const link = "[URL de la invitación]"; // URL de la invitación
+      navigator.clipboard.writeText(link).then(function() {
+        alert("청첩장 링크가 복사되었습니다.");
+      });
+    });
+
+    // Función para mostrar mensajes
+    function message(msg) {
+      alert(msg);
+    }
+  </script>
+</section>
+
 
     <footer>
       Copyright © 2021 KyuHyuk Lee
     </footer>
   </main>
-
-  <script>
-    // Aquí podrías agregar scripts para llenar las secciones si lo necesitas
-  </script>
 </body>
 </html>
