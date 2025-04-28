@@ -132,6 +132,29 @@
   </div>
 </section>
 
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Inicialización de Swiper -->
+<script>
+  var thumbsSwiper = new Swiper(".thumbs-swiper", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  var mainSwiper = new Swiper(".main-swiper", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: thumbsSwiper,
+    },
+  });
+</script>
 
 
 
@@ -275,29 +298,6 @@
 
 
 
-    <!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<!-- Inicialización de Swiper -->
-<script>
-  var thumbsSwiper = new Swiper(".thumbs-swiper", {
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
-
-  var mainSwiper = new Swiper(".main-swiper", {
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: thumbsSwiper,
-    },
-  });
-</script>
 
     
 
