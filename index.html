@@ -95,66 +95,24 @@
       </section>
 
 
-<section id="gallery" style="background: #efebe9; background-image: url('./assets/GroovePaper.png'); width: 100%; text-align: center; padding-bottom: 24px;">
-  <hr style="margin-top: 0; margin-bottom: 32px;">
-  <p style="font-size: 2vh; font-weight: bold; opacity: 0.85; margin-bottom: 0;">Génesis 2:24</p>
-
-  <div style="font-size: 1.75vh; line-height: 1.75; opacity: 0.75; margin-bottom: 16px; width: 100%; text-align: center;">
-    "Por eso deja el hombre a su padre y a su madre y se une a su mujer, y se hacen una sola carne"
-  </div>
-
-  <!-- Swiper principal -->
-  <div class="swiper main-swiper" style="width: 80%; height: auto; margin: auto;">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="./public/assets/Gallery_Photo_1.png" style="width: 100%; border-radius: 8px;"></div>
-      <div class="swiper-slide"><img src="./public/assets/Gallery_Photo_2.png" style="width: 100%; border-radius: 8px;"></div>
-      <div class="swiper-slide"><img src="./public/assets/Gallery_Photo_3.png" style="width: 100%; border-radius: 8px;"></div>
-      <div class="swiper-slide"><img src="./public/assets/Gallery_Photo_4.png" style="width: 100%; border-radius: 8px;"></div>
-      <div class="swiper-slide"><img src="./public/assets/Gallery_Photo_5.png" style="width: 100%; border-radius: 8px;"></div>
-      <div class="swiper-slide"><img src="./public/assets/Gallery_Photo_6.png" style="width: 100%; border-radius: 8px;"></div>
-    </div>
+  <section id="gallery" style="background: #efebe9; background-image: url('./assets/GroovePaper.png'); width: 100%; text-align: center; padding-bottom: 24px;">
+      <hr style="margin-top: 0; margin-bottom: 32px;">
+      <p style="font-size: 2vh; font-weight: bold; opacity: 0.85; margin-bottom: 0;">Génesis 2:24</p>
     
-    <!-- Botones de navegación -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
+      <div style="font-size: 1.75vh; line-height: 1.75; opacity: 0.75; margin-bottom: 16px; width: 100%; text-align: center;">
+      "Por eso deja el hombre a su padre y a su madre y se une a su mujer, y se hacen una sola carne"
+      </div>
+      
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 24px;">
+        <img src="./public/assets/Gallery_Photo_1.png" alt="Galería 1" style="width: 200px; height: auto; border-radius: 8px;">
+        <img src="./public/assets/Gallery_Photo_2.png" alt="Galería 2" style="width: 200px; height: auto; border-radius: 8px;">
+        <img src="./public/assets/Gallery_Photo_3.png" alt="Galería 3" style="width: 200px; height: auto; border-radius: 8px;">
+        <img src="./public/assets/Gallery_Photo_4.png" alt="Galería 4" style="width: 200px; height: auto; border-radius: 8px;">
+        <img src="./public/assets/Gallery_Photo_5.png" alt="Galería 5" style="width: 200px; height: auto; border-radius: 8px;">
+        <img src="./public/assets/Gallery_Photo_6.png" alt="Galería 6" style="width: 200px; height: auto; border-radius: 8px;">
+      </div>
+    </section>
 
-  <!-- Swiper de miniaturas -->
-  <div class="swiper thumbs-swiper" style="width: 80%; height: 100px; margin: 16px auto;">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="./public/assets/Gallery_Photo_1.png" style="height: 100%; object-fit: cover; border-radius: 8px;"></div>
-      <div class="swiper-slide"><img src="./public/assets/Gallery_Photo_2.png" style="height: 100%; object-fit: cover; border-radius: 8px;"></div>
-      <div class="swiper-slide"><img src="./public/assets/Gallery_Photo_3.png" style="height: 100%; object-fit: cover; border-radius: 8px;"></div>
-      <div class="swiper-slide"><img src="./public/assets/Gallery_Photo_4.png" style="height: 100%; object-fit: cover; border-radius: 8px;"></div>
-      <div class="swiper-slide"><img src="./public/assets/Gallery_Photo_5.png" style="height: 100%; object-fit: cover; border-radius: 8px;"></div>
-      <div class="swiper-slide"><img src="./public/assets/Gallery_Photo_6.png" style="height: 100%; object-fit: cover; border-radius: 8px;"></div>
-    </div>
-  </div>
-</section>
-
-    <!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<!-- Inicialización de Swiper -->
-<script>
-  var thumbsSwiper = new Swiper(".thumbs-swiper", {
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
-
-  var mainSwiper = new Swiper(".main-swiper", {
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: thumbsSwiper,
-    },
-  });
-</script>
 
 
 
