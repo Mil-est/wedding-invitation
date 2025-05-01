@@ -96,6 +96,56 @@
         
          <p style="font-size: 2vh; line-height: 2; opacity: 0.95; margin-bottom: 0; width: 100%; text-align: center;">
          Sábado, 17 de enero de 2026 <br>
+         3pm
+
+           <!DOCTYPE html>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    .fecha-invitacion {
+      font-family: 'Playfair Display', serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      font-size: 32px;
+      color: #333;
+    }
+
+    .fecha-invitacion .linea {
+      border-left: 1px solid #000;
+      height: 1.5em;
+    }
+
+    .fecha-invitacion .punto {
+      margin: 0 8px;
+    }
+
+    .fecha-invitacion .dia,
+    .fecha-invitacion .hora {
+      font-size: 0.6em;
+      letter-spacing: 1px;
+    }
+
+    .fecha-invitacion .hora {
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="fecha-invitacion">
+    <span class="dia">Sáb</span>
+    <div class="linea"></div>
+    <span>17</span>
+    <span class="punto">·</span>
+    <span>01</span>
+    <span class="punto">·</span>
+    <span>26</span>
+    <div class="linea"></div>
+    <span class="hora">5PM</span>
+  </div>
+
         <p style="font-size: 1.75vh; line-height: 2; opacity: 0.95; margin-bottom: 0; width: 100%; text-align: center;">
          Están cordialmente invitados <br>
         
@@ -274,58 +324,6 @@
   </a>
 
 
-  
-  <script>
-    // Lógica para compartir en KakaoTalk
-    document.getElementById('sendKakao').addEventListener('click', function() {
-      const url = "[URL de la invitación]"; // Reemplazar con la URL de la invitación
-      const title = "Rodrigo ❤ Kathia 결혼식에 초대합니다"; // Título de la invitación
-      const description = "아래의 '청첩장 열기' 버튼을 눌러 읽어주세요🤵👰"; // Descripción
-      const imageUrl = "[Imagen de la invitación]"; // Imagen de la invitación (URL de la imagen)
-      
-      // Asegúrate de que Kakao esté inicializado antes de usarlo
-      if (window.Kakao) {
-        window.Kakao.init("[API_TOKEN]"); // Token de la API de Kakao
-
-        window.Kakao.Link.createDefaultButton({
-          objectType: 'feed',
-          container: '#sendKakao',
-          content: {
-            title: title,
-            description: description,
-            imageUrl: imageUrl,
-            link: {
-              mobileWebUrl: url,
-              webUrl: url
-            }
-          },
-          buttons: [{
-            title: "청첩장 열기",
-            link: {
-              mobileWebUrl: url,
-              webUrl: url
-            }
-          }],
-          installTalk: true
-        });
-
-        message("카카오톡으로 청첩장을 공유합니다!"); // Mensaje de éxito
-      }
-    });
-
-    // Lógica para copiar el link al portapapeles
-    document.getElementById('copyLink').addEventListener('click', function() {
-      const link = "[URL de la invitación]"; // URL de la invitación
-      navigator.clipboard.writeText(link).then(function() {
-        alert("청첩장 링크가 복사되었습니다.");
-      });
-    });
-
-    // Función para mostrar mensajes
-    function message(msg) {
-      alert(msg);
-    }
-  </script>
 </section>
 
 
