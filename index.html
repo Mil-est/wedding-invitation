@@ -125,20 +125,41 @@ Texto gris oscuro con sombra suave.
       <span class="hora">3:30PM</span>
     </div>
 
-    <!-- BOTÓN MÚSICA -->
-    <button id="playMusicBtn" style="
-      margin-top: 4px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 25px;        /* ↓ más pequeño */
-      color: #2f2f2f;         /* gris oscuro */
-      animation: heartbeat 1.8s infinite;
-      line-height: 1;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.25);
-    ">
-      ♫
-    </button>
+<!-- AUDIO -->
+<audio id="music" loop>
+  <source src="musica_2.mpeg" type="audio/mpeg">
+</audio>
+
+<!-- BOTÓN MÚSICA -->
+<button id="playMusicBtn" style="
+  margin-top: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  color: #2f2f2f;
+  animation: heartbeat 1.8s infinite;
+  line-height: 1;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+">
+  ♫
+</button>
+
+<script>
+  const btn = document.getElementById("playMusicBtn");
+  const music = document.getElementById("music");
+
+  btn.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+      btn.textContent = "⏸";
+    } else {
+      music.pause();
+      btn.textContent = "♫";
+    }
+  });
+</script>
+
 
   </div>
 </section>
